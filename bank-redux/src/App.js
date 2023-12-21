@@ -5,12 +5,12 @@ import BalanceDisplay from "./features/accounts/BalanceDisplay";
 import { useSelector } from "react-redux";
 
 function App() {
-  const fullName = useSelector((state) => state.customer.fullName);
+  const fullName = useSelector((store) => store.customer.fullName);
 
   return (
     <div>
-      <h1>🏦 The React-Redux Bank ⚛️</h1>
-      {fullName === "" ? (
+      <h1> The React-Redux Bank *</h1>
+      {fullName==='' ? (
         <CreateCustomer />
       ) : (
         <>
@@ -21,6 +21,7 @@ function App() {
       )}
     </div>
   );
+  
 }
 
 export default App;

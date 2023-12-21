@@ -6,11 +6,10 @@ function Customer() {
   const [fullName, setFullName] = useState("");
   const [nationalId, setNationalId] = useState("");
 
-  const dispatch = useDispatch();
+  const dispatch = useDispatch();  // Fix: Remove createCustomer from here
 
   function handleClick() {
-    if (!fullName || !nationalId) return;
-    dispatch(createCustomer(fullName, nationalId));
+    dispatch(createCustomer(fullName, nationalId ));
   }
 
   return (
